@@ -1,24 +1,25 @@
 {
-  "name": "ejemplo1",
+  "name": "examen1",
   "version": "1.0.0",
-  "description": "proyectocongulp",
-  "main": "app.js",
+  "description": "examen 1 de pablo monestel",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "nib": "^1.1.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arroba/App-FCT-GrupoArroba.git"
+    "url": "git+https://github.com/FabianQF/Examen1-Fabi-nQF.git"
   },
-  "author": "WilkenChG",
+  "author": "Fabián",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Arroba/App-FCT-GrupoArroba/issues"
+    "url": "https://github.com/FabianQF/Examen1-Fabi-nQF/issues"
   },
-  "homepage": "https://github.com/Arroba/App-FCT-GrupoArroba#readme",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0",
-    "nib": "^1.1.2"
-  }
+  "homepage": "https://github.com/FabianQF/Examen1-Fabi-nQF#readme"
 }
