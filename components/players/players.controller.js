@@ -119,7 +119,7 @@
          timer: 3000,
          showConfirmButton: false
         })
-        playersService.updateTeacher(playersEdit);
+        playersService.updatePlayers(playersEdit);
         init();
         clean();
       } // Cierre de la función update
