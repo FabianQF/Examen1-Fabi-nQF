@@ -14,15 +14,15 @@
 
       // Encargada de mostrar la información al usuario
       $scope.pagina = 1;
-        $scope.siguiente = function(){
-          $scope.pagina++;
-        }
-        $scope.anterior = function() {
-          $scope.pagina--;
-        }
-        $scope.registro1 = function() {
-          $scope.pagina = 1;
-        } // Cierre de la encargada de mostrar la información al usuario
+      $scope.siguiente = function() {
+        $scope.pagina = 2;
+      }
+      $scope.anterior = function() {
+        $scope.pagina = 1;
+      }
+      $scope.registro1 = function() {
+        $scope.pagina = 1;
+      } // Cierre de la encargada de mostrar la información al usuario
 
       // Inicio de la función presave
       vm.presave= function(newPlayer){
@@ -41,8 +41,8 @@
           name: vm.name,
           firstName: vm.firstName,
           lastName: vm.lastName,
-          money: Number(1000),
           alias: vm.alias,
+          money: Number(1000),
           photo: vm.photo
         } // Cierre de newPlayer
 
@@ -56,8 +56,17 @@
            title: '¡Registro completado!',
            timer: 3000,
            showConfirmButton: false
-         })
+         }).then(
+              function () {},
+              // handling the promise rejection
+              function (dismiss) {
+                if (dismiss === 'timer') {
+                  console.log('Registro exitoso')
+                }
+              }
+            )
          return;
+
       } else{
           for(var i = 0; i < vm.players.length; i++){
             if(newPlayer.code == vm.players[i].code){
@@ -66,7 +75,15 @@
                title: '¡El código ya existe!',
                timer: 3000,
                showConfirmButton: false
-              })
+              }).then(
+                  function () {},
+                  // handling the promise rejection
+                  function (dismiss) {
+                    if (dismiss === 'timer') {
+                      console.log('Error, el código ya existe')
+                    }
+                  }
+                )
               return;
           } else{
                playersService.setPlayers(newPlayer);
@@ -77,7 +94,15 @@
                  title: '¡Registro completado!',
                  timer: 3000,
                  showConfirmButton: false
-               })
+               }).then(
+                  function () {},
+                  // handling the promise rejection
+                  function (dismiss) {
+                    if (dismiss === 'timer') {
+                      console.log('Registro exitoso')
+                    }
+                  }
+                )
                return;
             }
           }
@@ -118,7 +143,15 @@
          title: '¡Información actualizada!',
          timer: 3000,
          showConfirmButton: false
-        })
+        }).then(
+            function () {},
+            // handling the promise rejection
+            function (dismiss) {
+              if (dismiss === 'timer') {
+                console.log('Información actualizada')
+              }
+            }
+          )
         playersService.updatePlayers(playersEdit);
         init();
         clean();

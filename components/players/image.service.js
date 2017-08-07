@@ -8,10 +8,10 @@
 
     // Inicio del cloudObj
     var cloudObj = {
-      url:'https://api.cloudinary.com/v1_1/dxnv8pnia/image/upload',
+      url:'https://api.cloudinary.com/v1_1/dbvdk8f2r/image/upload',
       // Inicio del data
       data:{
-        upload_preset: '1Laboratorio',
+        upload_preset: 'Examen1-FabiánQuirós',
         tags:'Any',
         context:'photo=test'
       } // Cierre del data
