@@ -23,6 +23,19 @@
       css:'css/style.css'
     })
 
+    .state('buy',{
+  url : '/buy',
+  templateUrl: './components/buy/buy.view.html',
+  resolve: {
+    load: ['$ocLazyLoad', function($ocLazyLoad){
+      return $ocLazyLoad.load('./components/buy/buy.controller.js')
+    }]
+  },
+  controller: 'buyController',
+  controllerAs: 'vm',
+  css:'css/style.css'
+})
+
 
     $urlRouterProvider.otherwise('/players');
   }//cierre de las rutas
