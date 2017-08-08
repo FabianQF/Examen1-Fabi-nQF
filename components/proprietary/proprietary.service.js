@@ -663,6 +663,7 @@
         "Probability % (Jail Long)": 2.614
       },
       "oprice": 150,
+      "photo": 'http://res.cloudinary.com/dbvdk8f2r/image/upload/v1501896178/marvin_m1qgrx.jpg',
       "averageProbability": 2.609
     },
     {
@@ -680,6 +681,7 @@
         "Probability % (Jail Long)": 2.6507
       },
       "oprice": 150,
+      "photo": 'http://res.cloudinary.com/dbvdk8f2r/image/upload/v1501894959/oriental_at09ar.jpg',
       "averageProbability": 2.72905
     },
     {
@@ -698,6 +700,7 @@
         "Probability % (Jail Long)": 2.801
       },
       "oprice": 200,
+      "photo": 'http://res.cloudinary.com/dbvdk8f2r/image/upload/v1501894950/baltic_w8vy0f.jpg',
       "averageProbability": 2.88205
     },
     {
@@ -715,6 +718,7 @@
         "Probability % (Jail Long)": 2.6354
       },
       "oprice": 200,
+      "photo": 'http://res.cloudinary.com/dbvdk8f2r/image/upload/v1501894966/james_mlyfb1.jpg',
       "averageProbability": 2.777700000003
     },
     {
@@ -726,6 +730,7 @@
       "ownedby": -1,
       "mortgaged": false,
       "oprice": 200,
+      "photo": 'http://res.cloudinary.com/dbvdk8f2r/image/upload/v1501896171/pacific_hwerky.jpg',
       "averageProbability": 2.975
     },
     {
@@ -737,6 +742,7 @@
       "ownedby": -1,
       "mortgaged": false,
       "oprice": 200,
+      "photo": 'http://res.cloudinary.com/dbvdk8f2r/image/upload/v1501894465/medi_s1ztr3.jpg',
       "averageProbability": 2.360950000002
     }
   ];
@@ -744,7 +750,9 @@
     var publicAPI = {
       setProprietary : _setProprietary,
       getProprietary : _getProprietary,
-      updateProprietary : _updateProprietary
+      updateProprietary : _updateProprietary,
+      updateState: _updateState
+
     }; // Cierre del publicAPI
     return publicAPI;
 
@@ -759,8 +767,13 @@
     function _getProprietary(){
       var proprietaryList = JSON.parse(localStorage.getItem('lsProprietaryList'));
 
+
       if(proprietaryList == null){
         proprietaryList = proprietary;
+      }
+       else{
+        proprietaryList = proprietaryList;
+
       }// Cierre del if
 
       return proprietaryList;
@@ -776,6 +789,11 @@
       } // Cierre del ciclo
       localStorage.setItem('lsProprietaryList', JSON.stringify(proprietaryList));
     }// Fin de la función updateProprietary
+
+    function _updateState(pProprietaryList){
+
+  localStorage.setItem('lsProprietaryList', JSON.stringify(pProprietaryList));
+}//cierre función updateState
 
   }// Fin de función proprietaryService
 })();

@@ -26,8 +26,4 @@ md-input-container label{
 .main-panel{
   padding-top: 60px;
 }
-#frmRegisterBuy md-input-container md-optgroup md-option{
-  color: #000;
-  font-size: 30px;
-}
 /*Fin estilos del buscador*/

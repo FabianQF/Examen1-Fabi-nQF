@@ -54,7 +54,7 @@
                     <input type="text" list="playerList" ng-model="vm.player" name="player" required>
                     <datalist id="playerList">
                       <optgroup label="Seleccione un jugador">
-                        <option ng-repeat="player in vm.playerRel" value="{{player.name}}">{{vm.player.name}}</option>
+                        <option ng-repeat="player in vm.playerRel track by $index" value="{{player.name}}">{{vm.player.name}}</option>
                       </optgroup>
                     </datalist>
                     <div ng-messages="frmRegisterBuy.player.$error">
@@ -68,7 +68,7 @@
                     <input type="text" list="proprietaryList" ng-model="vm.proprietary" name="proprietary" required>
                     <datalist id="proprietaryList">
                       <option value="">Seleccione una propiedad</option>
-                      <option ng-repeat="proprietary in vm.proprietaryRel" value="{{proprietary.name}}">{{vm.proprietary.name}}</option>
+                      <option ng-repeat="proprietary in vm.proprietaryRel track by $index" value="{{proprietary.name}}">{{vm.proprietary.name}}</option>
                     </datalist>
                     <div ng-messages="frmRegisterBuy.proprietary.$error">
                       <div ng-messages-include="components/includes/messages.html"></div>

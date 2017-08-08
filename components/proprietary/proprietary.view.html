@@ -58,7 +58,7 @@
 
                     <md-input-container class="col-xs-12 col-sm-4 col-md-4" layout="column">
                       <label for="">Código:</label>
-                      <input type="number" ng-model="vm.id" name="id" ng-maxlength="20" required>
+                      <input type="text" ng-model="vm.id" name="id" ng-maxlength="20" required>
                       <div ng-messages="frmRegisterPropietary.id.$error">
                         <div ng-messages-include="components/includes/messages.html"></div>
                       </div> <!--cierre del ng-messages -->
@@ -74,7 +74,7 @@
 
                     <md-input-container class="col-xs-12 col-sm-4 col-md-4" layout="column">
                       <label for="">Precio:</label>
-                      <input type="number" ng-model="vm.price" name="price" ng-maxlength="20" required>
+                      <input type="text" ng-model="vm.price" name="price" ng-maxlength="20" required>
                       <div ng-messages="frmRegisterPropietary.price.$error">
                         <div ng-messages-include="components/includes/messages.html"></div>
                       </div> <!--cierre del ng-messages -->
@@ -168,7 +168,7 @@
                     </md-card-title-text>
                     <md-card-title-media>
                       <div class="md-media-md card-media">
-                        <img ng-src="{{proprietary.photo}}" alt="Description">
+                        <img ng-src="{{proprietary.photo}}" alt="Sin fotografía">
                       </div>
                     </md-card-title-media>
                   </md-card-title>

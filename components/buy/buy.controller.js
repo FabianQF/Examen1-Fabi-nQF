@@ -9,8 +9,8 @@
       // Inicio de la función init que es la que se inicializa de primiera
       function init(){
         vm.buy = buyService.getBuy();
-        // vm.playerRel = playersService.getPlayers();
-        // vm.proprietaryRel = proprietaryService.getProprietary();
+        vm.playerRel = playersService.getPlayers();
+        vm.proprietaryRel = proprietaryService.getProprietary();
       }init(); // Cierre de la función init
 
       // Encargada de mostrar la información al usuario
