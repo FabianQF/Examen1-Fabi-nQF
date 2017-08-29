@@ -55,4 +55,4 @@ gulp.task('watch', function(){
 	],['html']);
 })
 
-gulp.task('prueba', ['connect','css','html','js','watch'])
+gulp.task('examen2Pabs', ['connect','css','html','js','watch'])

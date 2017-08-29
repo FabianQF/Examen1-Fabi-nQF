@@ -1,0 +1,33 @@
+/*Estilos generales*/
+.displayNone{
+  display: none;
+}
+#frmRegisterPropietary{
+  padding-top: 40px;
+}
+#frmRegisterPlayers{
+  padding-top: 40px;
+}
+#frmRegisterBuy{
+  padding-top: 40px;
+}
+md-input-container label{
+  color: #000;
+  margin-left: 14px;
+}
+/*Inicio estilos del buscador*/
+.inputSearch .search-form{
+  padding-top: 25px;
+}
+.main-panel{
+  padding-top: 60px;
+}
+.photoClass{
+  padding-top: 38px;
+  margin-left: 30px;
+}
+#photo{
+  display: none;
+}
+
+/*Fin estilos del buscador*/
